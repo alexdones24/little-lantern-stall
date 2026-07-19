@@ -1,0 +1,263 @@
+[gd_scene format=3 uid="uid://cd1eau2bk1uvt"]
+
+[ext_resource type="Texture2D" uid="uid://bmm0llpijcecb" path="res://assets/food/Food.png" id="1_a5fiw"]
+[ext_resource type="Script" uid="uid://docbymtvgm1eb" path="res://scripts/food.gd" id="1_vkmpk"]
+[ext_resource type="Texture2D" uid="uid://bvv0klpmy7b8j" path="res://assets/food/Food_Sprites.png" id="2_upor0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4bxk"]
+atlas = ExtResource("2_upor0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk6hf"]
+atlas = ExtResource("2_upor0")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v48ky"]
+atlas = ExtResource("2_upor0")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g03ts"]
+atlas = ExtResource("2_upor0")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rrv88"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4bxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk6hf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v48ky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g03ts")
+}],
+"loop": true,
+"name": &"eat",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_darjh"]
+atlas = ExtResource("2_upor0")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iapg6"]
+atlas = ExtResource("2_upor0")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hsmn"]
+atlas = ExtResource("2_upor0")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4trwv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_darjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iapg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hsmn")
+}],
+"loop": true,
+"name": &"eat",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yade7"]
+atlas = ExtResource("2_upor0")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_283nh"]
+atlas = ExtResource("2_upor0")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnoiy"]
+atlas = ExtResource("2_upor0")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_41140"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yade7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_283nh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnoiy")
+}],
+"loop": true,
+"name": &"eat",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1olcv"]
+atlas = ExtResource("2_upor0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwipm"]
+atlas = ExtResource("2_upor0")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldkra"]
+atlas = ExtResource("2_upor0")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry4r0"]
+atlas = ExtResource("2_upor0")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fnm6u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1olcv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwipm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldkra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ry4r0")
+}],
+"loop": true,
+"name": &"eat",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upor0"]
+atlas = ExtResource("1_a5fiw")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x4bxk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upor0")
+}],
+"loop": true,
+"name": &"eat",
+"speed": 4.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm175"]
+atlas = ExtResource("2_upor0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipeun"]
+atlas = ExtResource("2_upor0")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bog24"]
+atlas = ExtResource("2_upor0")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhnpq"]
+atlas = ExtResource("2_upor0")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g1he8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm175")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipeun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bog24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhnpq")
+}],
+"loop": true,
+"name": &"eat",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvjl2"]
+atlas = ExtResource("2_upor0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tc3em"]
+atlas = ExtResource("2_upor0")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxb11"]
+atlas = ExtResource("2_upor0")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqtrn"]
+atlas = ExtResource("2_upor0")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_08oxc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvjl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tc3em")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxb11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqtrn")
+}],
+"loop": true,
+"name": &"eat",
+"speed": 2.0
+}]
+
+[node name="Food" type="Node2D" unique_id=590380331]
+modulate = Color(0.96754104, 0.8142354, 0.63916576, 1)
+z_index = -1
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_vkmpk")
+
+[node name="Food1" type="AnimatedSprite2D" parent="." unique_id=534085695]
+sprite_frames = SubResource("SpriteFrames_rrv88")
+animation = &"eat"
+autoplay = "eat"
+frame_progress = 0.1776745
+
+[node name="Food2" type="AnimatedSprite2D" parent="." unique_id=1390641849]
+sprite_frames = SubResource("SpriteFrames_4trwv")
+animation = &"eat"
+autoplay = "eat"
+
+[node name="Food3" type="AnimatedSprite2D" parent="." unique_id=1656505553]
+sprite_frames = SubResource("SpriteFrames_41140")
+animation = &"eat"
+autoplay = "eat"
+
+[node name="Food4" type="AnimatedSprite2D" parent="." unique_id=2026157936]
+sprite_frames = SubResource("SpriteFrames_fnm6u")
+animation = &"eat"
+autoplay = "eat"
+
+[node name="Food5" type="AnimatedSprite2D" parent="." unique_id=995362368]
+sprite_frames = SubResource("SpriteFrames_x4bxk")
+animation = &"eat"
+
+[node name="Food6" type="AnimatedSprite2D" parent="." unique_id=1189659810]
+sprite_frames = SubResource("SpriteFrames_g1he8")
+animation = &"eat"
+autoplay = "eat"
+
+[node name="Food7" type="AnimatedSprite2D" parent="." unique_id=1365140161]
+sprite_frames = SubResource("SpriteFrames_08oxc")
+animation = &"eat"
+autoplay = "eat"

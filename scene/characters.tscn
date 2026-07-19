@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cugvphm8r5nqh"]
+
+[ext_resource type="Texture2D" uid="uid://dk4tm5fe2qx3w" path="res://assets/character/strawbygirl idle.png" id="1_cg3ta"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0n6m"]
+atlas = ExtResource("1_cg3ta")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v77ma"]
+atlas = ExtResource("1_cg3ta")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xt6nf"]
+atlas = ExtResource("1_cg3ta")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efsi6"]
+atlas = ExtResource("1_cg3ta")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u758p"]
+atlas = ExtResource("1_cg3ta")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq47e"]
+atlas = ExtResource("1_cg3ta")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hxhik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0n6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v77ma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xt6nf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efsi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u758p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq47e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="characters" type="Node2D" unique_id=270593234]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1925562958]
+position = Vector2(43.673187, -52.6406)
+scale = Vector2(3.7295742, 3.1933587)
+sprite_frames = SubResource("SpriteFrames_hxhik")
+autoplay = "default"
+frame_progress = 0.98905987

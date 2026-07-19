@@ -1,0 +1,1393 @@
+[gd_scene format=3 uid="uid://dxpxr3buthlno"]
+
+[ext_resource type="Script" uid="uid://t01n5s0p6ote" path="res://scripts/game.gd" id="1_dbls1"]
+[ext_resource type="PackedScene" uid="uid://deh0pa8q8ww1m" path="res://scene/stall.tscn" id="3_33cqm"]
+[ext_resource type="Script" uid="uid://cli4r7nximto2" path="res://scripts/money.gd" id="3_xwcet"]
+[ext_resource type="Texture2D" uid="uid://bikfmc8m3w5x5" path="res://assets/UI/free.png" id="4_xwcet"]
+[ext_resource type="Texture2D" uid="uid://coonqiy88rbbr" path="res://assets/UI/Uiz.png" id="5_b8t8i"]
+[ext_resource type="Script" uid="uid://dggyysla4401l" path="res://scripts/upgradeButton.gd" id="6_jhlss"]
+[ext_resource type="FontFile" uid="uid://kcdtk8yrh34w" path="res://assets/fonts/PixelOperator8.ttf" id="6_ww6yf"]
+[ext_resource type="Texture2D" uid="uid://dv8fxgmm0pmlw" path="res://assets/bg/Minimalist pixel oce.png" id="9_i6gbm"]
+[ext_resource type="Texture2D" uid="uid://cskj6ibq5y1iv" path="res://assets/stall/Pixel-style dock wit.png" id="13_5g16k"]
+[ext_resource type="Texture2D" uid="uid://cqg1p1p20y1ll" path="res://assets/bg/Chunky pixel water t.png" id="13_81276"]
+[ext_resource type="AudioStream" uid="uid://bjkib8axeujfa" path="res://assets/music/freesoundeffects-button-click-289742.mp3" id="14_355h4"]
+[ext_resource type="Texture2D" uid="uid://d1xxkwuw4qhjc" path="res://assets/stall/Lantern pillar and string - 1.png" id="15_ve786"]
+[ext_resource type="Texture2D" uid="uid://d1jfxjim4fdoi" path="res://assets/bg/SsCN5z.png" id="16_0lu6w"]
+[ext_resource type="Texture2D" uid="uid://dn86wd7y3r8id" path="res://assets/tileset.png" id="18_jrd6n"]
+[ext_resource type="Texture2D" uid="uid://dv718r113scs" path="res://assets/JapanProps-02.png" id="19_jrd6n"]
+[ext_resource type="Texture2D" uid="uid://bnyjb78j2t78j" path="res://assets/UI/All.png" id="20_ww6yf"]
+[ext_resource type="FontFile" uid="uid://7u72ayqilyjg" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="21_pp3pk"]
+[ext_resource type="Texture2D" uid="uid://c10ckbb2l2xlo" path="res://assets/UI/Ui.png" id="22_1it6f"]
+[ext_resource type="AudioStream" uid="uid://b6rrwle2dh4ia" path="res://assets/music/shut_up_ghost-cooking-frying-sizzling-food-free-kitchen-sound-effect-382864.mp3" id="23_b8t8i"]
+[ext_resource type="Texture2D" uid="uid://bmm0llpijcecb" path="res://assets/food/Food.png" id="23_pp3pk"]
+[ext_resource type="AudioStream" uid="uid://c7f4u0v6iqxh3" path="res://assets/music/solarmusic-ocean-waves-112906.mp3" id="24_355h4"]
+[ext_resource type="Texture2D" uid="uid://cegt7smhajcaf" path="res://assets/UI/UiCozyFree.png" id="26_ca6q5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1it6f"]
+atlas = ExtResource("5_b8t8i")
+region = Rect2(13, 48, 47, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp3pk"]
+atlas = ExtResource("5_b8t8i")
+region = Rect2(80, 49, 43, 12)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1it6f"]
+bg_color = Color(0.21960784, 0.21960784, 0.21960784, 0.74509805)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Gradient" id="Gradient_yerfe"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.63414633)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b8t8i"]
+gradient = SubResource("Gradient_yerfe")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yerfe"]
+atlas = ExtResource("20_ww6yf")
+region = Rect2(16, 144, 48, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8t8i"]
+atlas = ExtResource("22_1it6f")
+region = Rect2(14, 82, 44, 14)
+
+[sub_resource type="Animation" id="Animation_ca6q5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../lantern/light1:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("light2:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.85]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../lanter3/light3:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../lantern4/light4:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.55]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../lantern5/light5:energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../../Lighting/light9:energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.9]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../../Lighting/light10:energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.9]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../../Lighting/light11:energy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.9]
+}
+
+[sub_resource type="Animation" id="Animation_yerfe"]
+resource_name = "flicker"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../lantern/light1:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.74, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [2.1, 1.35, 2.5, 1.6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("light2:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.74, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.85, 2.35, 1.25, 2.2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../lanter3/light3:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.74, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [2.3, 1.5, 2.0, 1.2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../lantern4/light4:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.74, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.55, 2.45, 1.4, 2.1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../lantern5/light5:energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.74, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 1.15, 2.4, 1.7]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../../Lighting/light9:energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.74, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.9, 2.2, 1.75, 2.1]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../../Lighting/light10:energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.74, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.9, 2.2, 1.75, 2.1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../../Lighting/light11:energy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.74, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.9, 2.2, 1.75, 2.1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_abp7u"]
+_data = {
+&"RESET": SubResource("Animation_ca6q5"),
+&"flicker": SubResource("Animation_yerfe")
+}
+
+[sub_resource type="Gradient" id="Gradient_ca6q5"]
+offsets = PackedFloat32Array(0, 0.24, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.532, 0.532, 0.532, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yerfe"]
+gradient = SubResource("Gradient_ca6q5")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abp7u"]
+atlas = ExtResource("26_ca6q5")
+region = Rect2(8, 167, 87, 81)
+
+[node name="game" type="Node2D" unique_id=1455330062]
+script = ExtResource("1_dbls1")
+
+[node name="stall" parent="." unique_id=340814569 instance=ExtResource("3_33cqm")]
+position = Vector2(-47.864532, -124.81465)
+scale = Vector2(1.337586, 1.2898335)
+
+[node name="dock" type="Sprite2D" parent="." unique_id=932920797]
+modulate = Color(0.5411765, 0.53333336, 0.19607843, 1)
+z_index = -1
+position = Vector2(174.76746, 93.85986)
+scale = Vector2(0.7666335, 0.97597873)
+texture = ExtResource("13_5g16k")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=417766363]
+position = Vector2(5.454529, -101)
+rotation = 0.7256076
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=2112095698]
+one_shot = true
+
+[node name="CustomerTimer" type="Timer" parent="." unique_id=1753350849]
+one_shot = true
+
+[node name="susNpcSpawnTimer" type="Timer" parent="." unique_id=1017420700]
+
+[node name="drops" type="Node2D" parent="." unique_id=502640317]
+z_index = 3
+position = Vector2(4, 1)
+
+[node name="CustomerStart" type="Marker2D" parent="." unique_id=1231981451]
+position = Vector2(565.424, 299.47342)
+scale = Vector2(4.530878, 3.897765)
+
+[node name="CustomerLayers" type="Node2D" parent="." unique_id=380908126]
+position = Vector2(564.4973, 235.6167)
+
+[node name="CustomerLayer1" type="Node2D" parent="CustomerLayers" unique_id=1386415848]
+z_index = 1
+
+[node name="CustomerLayer2" type="Node2D" parent="CustomerLayers" unique_id=1270826087]
+z_index = 2
+position = Vector2(-40.49695, 23.90207)
+
+[node name="CustomerLayer3" type="Node2D" parent="CustomerLayers" unique_id=580678109]
+z_index = 3
+position = Vector2(-68.47781, 38.836823)
+
+[node name="CustomerLayer4" type="Node2D" parent="CustomerLayers" unique_id=546454525]
+z_index = 4
+position = Vector2(-94.3934, 58.908783)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1076131146]
+follow_viewport_enabled = true
+
+[node name="Uiz" type="Sprite2D" parent="UI" unique_id=955305361]
+modulate = Color(0.98039216, 0.8039216, 0.60784316, 1)
+position = Vector2(-426.48828, 163.48431)
+scale = Vector2(3.1461005, 3.054619)
+texture = ExtResource("5_b8t8i")
+region_enabled = true
+region_rect = Rect2(12, 3, 65, 29)
+
+[node name="icon" type="Sprite2D" parent="UI" unique_id=1701904993]
+modulate = Color(0.98039216, 0.8039216, 0.60784316, 1)
+texture_filter = 1
+position = Vector2(-489.70734, 171.21327)
+scale = Vector2(2.5264015, 2.623695)
+texture = ExtResource("4_xwcet")
+region_enabled = true
+region_rect = Rect2(5, 39, 21, 18)
+
+[node name="money" type="Label" parent="UI" unique_id=1798489414]
+z_index = 1
+anchors_preset = -1
+anchor_left = -0.499
+anchor_top = -0.49600002
+anchor_right = -0.444382
+anchor_bottom = -0.44870213
+offset_left = 148.96921
+offset_top = 466.4383
+offset_right = 136.04926
+offset_bottom = 451.6853
+theme_override_colors/font_color = Color(0.2509804, 0.11764706, 0.07450981, 1)
+theme_override_constants/line_spacing = 3
+theme_override_fonts/font = ExtResource("6_ww6yf")
+theme_override_font_sizes/font_size = 12
+text = "¥0.00"
+vertical_alignment = 1
+script = ExtResource("3_xwcet")
+
+[node name="UpgradeButton" type="TextureButton" parent="UI" unique_id=237722968]
+modulate = Color(0.98039216, 0.8039216, 0.60784316, 1)
+z_index = -1
+offset_left = -456.28152
+offset_top = 165.98303
+offset_right = -400.28152
+offset_bottom = 190.98303
+scale = Vector2(3.6191452, 2.9674501)
+texture_normal = SubResource("AtlasTexture_1it6f")
+texture_pressed = SubResource("AtlasTexture_pp3pk")
+script = ExtResource("6_jhlss")
+
+[node name="Upgrade" type="Label" parent="UI/UpgradeButton" unique_id=279391399]
+layout_mode = 0
+offset_left = 5.625791
+offset_top = 3.238256
+offset_right = 167.6258
+offset_bottom = 26.238256
+scale = Vector2(0.24807869, 0.3327048)
+theme_override_colors/font_color = Color(0.2509804, 0.11764706, 0.07450981, 1)
+theme_override_fonts/font = ExtResource("6_ww6yf")
+theme_override_font_sizes/font_size = 12
+text = "Upgrade"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeHint" type="Label" parent="UI/UpgradeButton" unique_id=1327967370]
+layout_mode = 0
+offset_left = -14.373819
+offset_top = -41.075153
+offset_right = 251.74577
+offset_bottom = 30.37904
+scale = Vector2(0.22531109, 0.3040146)
+theme_override_fonts/font = ExtResource("6_ww6yf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1it6f")
+text = "Unlock Shrine protection - reduce Sus NPC spawn"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Click_Player" type="AudioStreamPlayer2D" parent="UI/UpgradeButton" unique_id=435639458]
+stream = ExtResource("14_355h4")
+
+[node name="bg" type="Node2D" parent="." unique_id=549601705]
+
+[node name="ChunkyPixelWaterT2" type="Sprite2D" parent="bg" unique_id=1676740713]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = -3
+position = Vector2(270.33002, 43.26535)
+scale = Vector2(0.40468934, 0.36049616)
+texture = ExtResource("13_81276")
+flip_v = true
+
+[node name="ChunkyPixelWaterT3" type="Sprite2D" parent="bg" unique_id=25767079]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = -3
+position = Vector2(-260.70013, 41.3739)
+scale = Vector2(0.40468934, 0.36049616)
+texture = ExtResource("13_81276")
+flip_v = true
+
+[node name="SsCn5z" type="Sprite2D" parent="bg" unique_id=1317260469]
+modulate = Color(0.6400993, 1.1061904, 1.2742168, 1)
+z_index = -4
+position = Vector2(-13.239933, -458.94257)
+scale = Vector2(0.7275666, 0.66655576)
+texture = ExtResource("16_0lu6w")
+
+[node name="MinimalistPixelOce" type="Sprite2D" parent="bg" unique_id=1025114152]
+visible = false
+modulate = Color(0.64043975, 0.5900163, 0.8245195, 1)
+z_index = -3
+position = Vector2(6.482831, -327.40652)
+scale = Vector2(0.7489251, 0.6789564)
+texture = ExtResource("9_i6gbm")
+
+[node name="Pillars and Lanters" type="Node2D" parent="." unique_id=445611689]
+
+[node name="strings" type="Node2D" parent="Pillars and Lanters" unique_id=930717161]
+
+[node name="string" type="Sprite2D" parent="Pillars and Lanters/strings" unique_id=1000332626]
+modulate = Color(0.75, 0.75, 0.75, 1)
+z_index = 1
+position = Vector2(409.5976, -156.10815)
+rotation = 0.40983266
+scale = Vector2(1.2966431, 2.9404385)
+skew = -0.049319386
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(166, 320, 192, 35)
+
+[node name="string2" type="Sprite2D" parent="Pillars and Lanters/strings" unique_id=442213463]
+modulate = Color(0.75, 0.75, 0.75, 1)
+z_index = -1
+position = Vector2(192.7433, -297.00372)
+rotation = 0.27728742
+scale = Vector2(1.5791079, 2.7147317)
+skew = 0.1437962
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(166, 320, 192, 35)
+
+[node name="string3" type="Sprite2D" parent="Pillars and Lanters/strings" unique_id=434101047]
+modulate = Color(0.75, 0.75, 0.75, 1)
+z_index = -1
+position = Vector2(6.4475784, -399.20813)
+rotation = 0.2772874
+scale = Vector2(0.8524895, 2.0481954)
+skew = 0.1437962
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(166, 320, 192, 35)
+
+[node name="string4" type="Sprite2D" parent="Pillars and Lanters/strings" unique_id=2053867851]
+modulate = Color(0.75, 0.75, 0.75, 1)
+z_index = -1
+position = Vector2(6.4475784, -399.20813)
+rotation = 0.2772874
+scale = Vector2(0.8524895, 2.0481954)
+skew = 0.1437962
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(166, 320, 192, 35)
+
+[node name="string5" type="Sprite2D" parent="Pillars and Lanters/strings" unique_id=292147802]
+modulate = Color(0.75, 0.75, 0.75, 1)
+z_index = -1
+position = Vector2(-158.82654, -381.25385)
+rotation = -0.3381913
+scale = Vector2(1.1852616, 2.1662571)
+skew = 0.2585342
+texture = ExtResource("15_ve786")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(166, 320, 192, 35)
+
+[node name="dock_pillar" type="Node2D" parent="Pillars and Lanters" unique_id=447188673]
+
+[node name="pillar1" type="Sprite2D" parent="Pillars and Lanters/dock_pillar" unique_id=1718448924]
+modulate = Color(0.75, 0.75, 0.75, 1)
+position = Vector2(306.90674, -109.6809)
+scale = Vector2(2.7800813, 3.457658)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(0, 251, 47, 111)
+
+[node name="pillar2" type="Sprite2D" parent="Pillars and Lanters/dock_pillar" unique_id=698309395]
+modulate = Color(0.75, 0.75, 0.75, 1)
+position = Vector2(489.5067, 25.619118)
+scale = Vector2(2.8578763, 3.457658)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(0, 251, 47, 111)
+
+[node name="pillar3" type="Sprite2D" parent="Pillars and Lanters/dock_pillar" unique_id=733274387]
+modulate = Color(0.75, 0.75, 0.75, 1)
+z_index = 2
+position = Vector2(-311.40234, -112.10815)
+scale = Vector2(2.8578763, 3.8917284)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(0, 251, 47, 111)
+
+[node name="pillar4" type="Sprite2D" parent="Pillars and Lanters/dock_pillar" unique_id=1812119015]
+modulate = Color(0.75, 0.75, 0.75, 1)
+z_index = -1
+position = Vector2(49.13833, -237.31784)
+scale = Vector2(2.7800813, 3.457658)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(0, 251, 47, 111)
+
+[node name="pillar5" type="Sprite2D" parent="Pillars and Lanters/dock_pillar" unique_id=1570473452]
+modulate = Color(0.75, 0.75, 0.75, 1)
+z_index = -1
+position = Vector2(-89.46163, -301.11786)
+scale = Vector2(2.7800813, 3.457658)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(0, 251, 47, 111)
+
+[node name="pillar6" type="Sprite2D" parent="Pillars and Lanters/dock_pillar" unique_id=1551983712]
+modulate = Color(0.75, 0.75, 0.75, 1)
+light_mask = 3
+z_index = -1
+position = Vector2(-269.8616, -208.71783)
+scale = Vector2(2.7800813, 3.457658)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(0, 251, 47, 111)
+
+[node name="stabilizer_pillar" type="Node2D" parent="Pillars and Lanters" unique_id=2038186128]
+
+[node name="pillar1" type="Sprite2D" parent="Pillars and Lanters/stabilizer_pillar" unique_id=210644559]
+modulate = Color(0.51, 0.47608498, 0.4131, 1)
+z_index = 10
+texture_filter = 1
+position = Vector2(415.1039, 289.52548)
+scale = Vector2(3.0555, 2.4927487)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(15, 251, 29, 50)
+region_filter_clip_enabled = true
+
+[node name="pillar2" type="Sprite2D" parent="Pillars and Lanters/stabilizer_pillar" unique_id=2084768427]
+modulate = Color(0.51, 0.47608498, 0.4131, 1)
+z_index = 10
+texture_filter = 1
+position = Vector2(346.2381, 252.83466)
+scale = Vector2(3.0555, 2.4927487)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(15, 251, 29, 50)
+region_filter_clip_enabled = true
+
+[node name="pillar3" type="Sprite2D" parent="Pillars and Lanters/stabilizer_pillar" unique_id=192511763]
+modulate = Color(0.51, 0.47608498, 0.4131, 1)
+z_index = 10
+texture_filter = 1
+position = Vector2(248.29681, 195.28276)
+scale = Vector2(3.0555, 2.4927487)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(15, 251, 29, 50)
+region_filter_clip_enabled = true
+
+[node name="pillar4" type="Sprite2D" parent="Pillars and Lanters/stabilizer_pillar" unique_id=435288021]
+modulate = Color(0.51, 0.47608498, 0.4131, 1)
+z_index = 10
+texture_filter = 1
+position = Vector2(182.43875, 151.50755)
+scale = Vector2(3.0555, 2.286869)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(15, 251, 29, 50)
+region_filter_clip_enabled = true
+
+[node name="pillar5" type="Sprite2D" parent="Pillars and Lanters/stabilizer_pillar" unique_id=523620305]
+modulate = Color(0.51, 0.47608498, 0.4131, 1)
+z_index = 10
+texture_filter = 1
+position = Vector2(119.37093, 120.829445)
+scale = Vector2(2.9011333, 2.1762693)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(15, 251, 29, 50)
+region_filter_clip_enabled = true
+
+[node name="pillar6" type="Sprite2D" parent="Pillars and Lanters/stabilizer_pillar" unique_id=765235962]
+modulate = Color(0.51, 0.47608498, 0.4131, 1)
+z_index = 10
+texture_filter = 1
+position = Vector2(-41.29592, 142.70116)
+scale = Vector2(2.8260884, 2.5244756)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(15, 251, 29, 50)
+region_filter_clip_enabled = true
+
+[node name="pillar7" type="Sprite2D" parent="Pillars and Lanters/stabilizer_pillar" unique_id=880111499]
+modulate = Color(0.51, 0.47608498, 0.4131, 1)
+z_index = 10
+texture_filter = 1
+position = Vector2(-106.6229, 112.80362)
+scale = Vector2(2.8260884, 2.5244756)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(15, 251, 29, 50)
+region_filter_clip_enabled = true
+
+[node name="pillar8" type="Sprite2D" parent="Pillars and Lanters/stabilizer_pillar" unique_id=692882581]
+modulate = Color(0.51, 0.47608498, 0.4131, 1)
+z_index = -1
+texture_filter = 1
+position = Vector2(-202.52307, 66.64399)
+scale = Vector2(2.8260884, 2.5244756)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(15, 251, 29, 50)
+region_filter_clip_enabled = true
+
+[node name="pillar9" type="Sprite2D" parent="Pillars and Lanters/stabilizer_pillar" unique_id=1685386943]
+modulate = Color(0.51, 0.47608498, 0.4131, 1)
+z_index = -1
+texture_filter = 6
+position = Vector2(226.40251, -41.28637)
+scale = Vector2(2.8260884, 2.5244756)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(15, 251, 29, 15)
+region_filter_clip_enabled = true
+
+[node name="Lantern" type="Node2D" parent="Pillars and Lanters" unique_id=1330540087]
+
+[node name="lantern" type="Sprite2D" parent="Pillars and Lanters/Lantern" unique_id=1761203206]
+z_index = 1
+position = Vector2(449.52505, -56.10106)
+scale = Vector2(1.5615156, 1.2697808)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(272.86905, 86.16434, 46.26523, 94.28296)
+
+[node name="light1" type="PointLight2D" parent="Pillars and Lanters/Lantern/lantern" unique_id=1068105922]
+position = Vector2(0.79274225, 9.687162)
+rotation = -3.1415925
+scale = Vector2(-0.52973646, -0.65041614)
+color = Color(0.9647059, 0.7294118, 0.38431373, 1)
+energy = 2.1
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="lantern2" type="Sprite2D" parent="Pillars and Lanters/Lantern" unique_id=1456179515]
+z_index = 1
+position = Vector2(379.61597, -77.01015)
+scale = Vector2(1.3836501, 1.2504383)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(227.58047, 104.855515, 47.793762, 99.54033)
+
+[node name="light2" type="PointLight2D" parent="Pillars and Lanters/Lantern/lantern2" unique_id=1080808961]
+position = Vector2(0.9770918, 10.9496355)
+scale = Vector2(0.39351934, 0.5335451)
+color = Color(0.7019608, 0.21568628, 0.02745098, 1)
+energy = 1.85
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 2.1
+
+[node name="lanter3" type="Sprite2D" parent="Pillars and Lanters/Lantern" unique_id=2043765901]
+z_index = 1
+position = Vector2(268.5589, -202.87752)
+scale = Vector2(1.5489404, 1.3110442)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(318.38748, 69.300064, 44.337555, 90.98833)
+
+[node name="light3" type="PointLight2D" parent="Pillars and Lanters/Lantern/lanter3" unique_id=1043183153]
+position = Vector2(0.07371712, 10.562225)
+scale = Vector2(0.36709428, 0.4983014)
+color = Color(0.6862745, 0.31764707, 0.07058824, 1)
+energy = 2.3
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 2.1
+
+[node name="lantern4" type="Sprite2D" parent="Pillars and Lanters/Lantern" unique_id=150845179]
+z_index = -1
+position = Vector2(191.76312, -209.05461)
+scale = Vector2(1.5615156, 1.2697808)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(272.86905, 86.16434, 46.26523, 94.28296)
+
+[node name="light4" type="PointLight2D" parent="Pillars and Lanters/Lantern/lantern4" unique_id=1966346673]
+position = Vector2(1.7781925, 11.308899)
+rotation = -3.1415925
+scale = Vector2(0.49023694, -0.65518606)
+color = Color(0.9647059, 0.7294118, 0.38431373, 1)
+energy = 1.55
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="lantern5" type="Sprite2D" parent="Pillars and Lanters/Lantern" unique_id=112085153]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+position = Vector2(-264.88748, -259.95615)
+scale = Vector2(1.3836501, 1.2504383)
+texture = ExtResource("15_ve786")
+region_enabled = true
+region_rect = Rect2(227.58047, 104.855515, 47.793762, 99.54033)
+
+[node name="light5" type="PointLight2D" parent="Pillars and Lanters/Lantern/lantern5" unique_id=1583780413]
+position = Vector2(0.29253006, 10.567673)
+scale = Vector2(0.46128243, 0.62068015)
+color = Color(0.7019608, 0.21568628, 0.02745098, 1)
+energy = 2.0
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 2.1
+
+[node name="food" type="Node2D" parent="." unique_id=963457478]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+position = Vector2(-74.57184, -123.403244)
+scale = Vector2(1.0950211, 0.9486215)
+
+[node name="Food7" type="Sprite2D" parent="food" unique_id=482515369]
+z_index = 2
+position = Vector2(-101.63205, -1.1296425)
+rotation = -1.9651853
+texture = ExtResource("23_pp3pk")
+region_enabled = true
+region_rect = Rect2(72, 64, 24, 64)
+
+[node name="Food8" type="Sprite2D" parent="food" unique_id=1853598716]
+z_index = 3
+position = Vector2(-83.67765, 13.473263)
+rotation = -2.0708513
+texture = ExtResource("23_pp3pk")
+region_enabled = true
+region_rect = Rect2(96, 64, 32, 64)
+
+[node name="Food" type="Sprite2D" parent="food" unique_id=1315685989]
+z_index = 4
+position = Vector2(-62.850548, 24.964077)
+rotation = -2.1099021
+texture = ExtResource("23_pp3pk")
+region_enabled = true
+region_rect = Rect2(128, 64, 32, 64)
+
+[node name="Food2" type="Sprite2D" parent="food" unique_id=1152454777]
+z_index = 6
+position = Vector2(-46.259815, 31.838694)
+rotation = -2.1635473
+skew = 0.073303826
+texture = ExtResource("23_pp3pk")
+region_enabled = true
+region_rect = Rect2(72, 64, 24, 64)
+
+[node name="Food4" type="Sprite2D" parent="food" unique_id=598585670]
+z_index = 5
+position = Vector2(-52.05903, 28.561253)
+rotation = -2.1099021
+texture = ExtResource("23_pp3pk")
+region_enabled = true
+region_rect = Rect2(0, 64, 32, 64)
+
+[node name="Food3" type="Sprite2D" parent="food" unique_id=1037432084]
+z_index = 2
+position = Vector2(-91.98767, 7.337921)
+rotation = -2.1099021
+texture = ExtResource("23_pp3pk")
+region_enabled = true
+region_rect = Rect2(0, 64, 32, 64)
+
+[node name="Food5" type="Sprite2D" parent="food" unique_id=39696480]
+z_index = 3
+position = Vector2(-73.82194, 17.410011)
+rotation = -2.1099021
+texture = ExtResource("23_pp3pk")
+region_enabled = true
+region_rect = Rect2(33.37615, 66.44323, 31.118145, 59.45365)
+
+[node name="Food6" type="Sprite2D" parent="food" unique_id=323288433]
+z_index = 7
+position = Vector2(-34.849525, 40.80368)
+rotation = -2.263157
+skew = 0.073303826
+texture = ExtResource("23_pp3pk")
+region_enabled = true
+region_rect = Rect2(33.37615, 66.44323, 31.118145, 59.45365)
+
+[node name="Food9" type="Sprite2D" parent="food" unique_id=739863942]
+z_index = 7
+position = Vector2(-26.43705, 42.769543)
+rotation = -2.2214885
+scale = Vector2(1, 1.0000001)
+skew = 0.073303826
+texture = ExtResource("23_pp3pk")
+region_enabled = true
+region_rect = Rect2(72, 64, 24, 64)
+
+[node name="Food10" type="Sprite2D" parent="food" unique_id=834103982]
+z_index = 9
+position = Vector2(-13.636717, 52.527195)
+rotation = -2.2743223
+skew = 0.073303826
+texture = ExtResource("23_pp3pk")
+region_enabled = true
+region_rect = Rect2(128, 64, 32, 64)
+
+[node name="StarryNight" type="Node2D" parent="." unique_id=790269899]
+modulate = Color(0.98039216, 0.8039216, 0.60784316, 1)
+
+[node name="Tileset" type="Sprite2D" parent="StarryNight" unique_id=885062009]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = -2
+position = Vector2(-540.76355, -236.74147)
+rotation = -0.013191253
+scale = Vector2(5.009374, 4.782125)
+skew = -0.0034906585
+texture = ExtResource("18_jrd6n")
+region_enabled = true
+region_rect = Rect2(170, 8, 118, 136)
+
+[node name="Tileset2" type="Sprite2D" parent="StarryNight" unique_id=1819595434]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = -1
+position = Vector2(584.09827, -354.87448)
+scale = Vector2(5.4154162, 5.862554)
+texture = ExtResource("18_jrd6n")
+region_enabled = true
+region_rect = Rect2(0, 80, 64, 64)
+
+[node name="Tileset3" type="Sprite2D" parent="StarryNight" unique_id=570279918]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = 3
+position = Vector2(-341.77905, 85.80612)
+rotation = -0.0023144444
+scale = Vector2(4.8301997, 5.1714654)
+texture = ExtResource("18_jrd6n")
+region_enabled = true
+region_rect = Rect2(72, 120, 72, 24)
+
+[node name="Tileset13" type="Sprite2D" parent="StarryNight" unique_id=1271477916]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = 3
+position = Vector2(-468.08557, 172.60574)
+rotation = -0.0023144444
+scale = Vector2(6.216301, 8.977887)
+texture = ExtResource("18_jrd6n")
+flip_h = true
+flip_v = true
+region_enabled = true
+region_rect = Rect2(72, 104, 40, 8)
+
+[node name="Tileset14" type="Sprite2D" parent="StarryNight" unique_id=946764511]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = 3
+position = Vector2(-295.004, 174.94318)
+rotation = -0.0023144444
+scale = Vector2(6.216301, 8.977887)
+texture = ExtResource("18_jrd6n")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(64, 104, 48, 8)
+
+[node name="Tileset15" type="Sprite2D" parent="StarryNight" unique_id=211886613]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = 3
+position = Vector2(501.33362, -152.80884)
+rotation = -0.0023144444
+scale = Vector2(4.8013296, 4.796111)
+texture = ExtResource("18_jrd6n")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(64, 104, 48, 8)
+
+[node name="Tileset10" type="Sprite2D" parent="StarryNight" unique_id=958978116]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = -2
+position = Vector2(-559.0521, 96.16438)
+rotation = 0.058486838
+scale = Vector2(4.8301997, 2.8444314)
+texture = ExtResource("18_jrd6n")
+region_enabled = true
+region_rect = Rect2(168, 144, 120, 16)
+
+[node name="Tileset11" type="Sprite2D" parent="StarryNight" unique_id=261025137]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = -2
+position = Vector2(-547.4759, 15.855007)
+rotation = 0.058486838
+scale = Vector2(6.6785326, 7.376668)
+texture = ExtResource("18_jrd6n")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(48, 56, 32, 24)
+
+[node name="Tileset12" type="Sprite2D" parent="StarryNight" unique_id=482108203]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = -2
+position = Vector2(-525.4759, 81.854996)
+rotation = 0.058486838
+scale = Vector2(6.6785326, 7.376668)
+texture = ExtResource("18_jrd6n")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(64, 80, 16, 16)
+
+[node name="Tileset4" type="Sprite2D" parent="StarryNight" unique_id=1333735003]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = 11
+position = Vector2(129.51254, 119.37988)
+scale = Vector2(5.6399155, 8.015039)
+texture = ExtResource("18_jrd6n")
+region_enabled = true
+region_rect = Rect2(144, 128, 16, 16)
+
+[node name="Tileset9" type="Sprite2D" parent="StarryNight" unique_id=457730319]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = 11
+position = Vector2(-286.72745, 20.159851)
+scale = Vector2(5.6399155, 8.015039)
+texture = ExtResource("18_jrd6n")
+region_enabled = true
+region_rect = Rect2(144, 128, 16, 16)
+
+[node name="Tileset5" type="Sprite2D" parent="StarryNight" unique_id=1685798908]
+modulate = Color(0.37897426, 0.35458332, 0.3019503, 1)
+z_index = -2
+position = Vector2(485.97824, -265.60596)
+scale = Vector2(5.955383, 8.102695)
+texture = ExtResource("18_jrd6n")
+region_enabled = true
+region_rect = Rect2(48, 56, 32, 24)
+
+[node name="Tileset6" type="Sprite2D" parent="StarryNight" unique_id=1865202852]
+modulate = Color(0.37897426, 0.35458332, 0.3019503, 1)
+z_index = -3
+position = Vector2(245.42633, -273.3733)
+scale = Vector2(4.395478, 5.2690096)
+texture = ExtResource("18_jrd6n")
+region_enabled = true
+region_rect = Rect2(48, 56, 32, 24)
+
+[node name="Tileset7" type="Sprite2D" parent="StarryNight" unique_id=1524632779]
+modulate = Color(0.37897426, 0.35458332, 0.3019503, 1)
+z_index = -2
+position = Vector2(282.69897, -236.10059)
+scale = Vector2(4.395478, 5.2690096)
+texture = ExtResource("18_jrd6n")
+region_enabled = true
+region_rect = Rect2(64, 80, 16, 16)
+
+[node name="Tileset8" type="Sprite2D" parent="StarryNight" unique_id=1747970874]
+modulate = Color(0.37897426, 0.35458332, 0.3019503, 1)
+z_index = -2
+position = Vector2(493.89478, -227.72386)
+scale = Vector2(5.585491, 7.3102508)
+texture = ExtResource("18_jrd6n")
+region_enabled = true
+region_rect = Rect2(16, 64, 16, 16)
+
+[node name="starlight" type="PointLight2D" parent="StarryNight" unique_id=1245849037]
+position = Vector2(559.0206, -311.54175)
+scale = Vector2(0.26512814, 0.27093762)
+color = Color(0.9647059, 0.7294118, 0.38431373, 1)
+energy = 4.0
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="starlight2" type="PointLight2D" parent="StarryNight" unique_id=1048425927]
+position = Vector2(-432.21442, -173.98264)
+scale = Vector2(0.26512814, 0.27093762)
+color = Color(0.9647059, 0.7294118, 0.38431373, 1)
+energy = 4.0
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="starlight3" type="PointLight2D" parent="StarryNight" unique_id=2054812375]
+position = Vector2(-501.49075, -163.97603)
+scale = Vector2(0.40410808, 0.4045724)
+color = Color(0.9647059, 0.7294118, 0.38431373, 1)
+energy = 4.0
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="starlight4" type="PointLight2D" parent="StarryNight" unique_id=665933865]
+position = Vector2(-385.51703, -101.88392)
+scale = Vector2(0.40410808, 0.4045724)
+color = Color(0.9647059, 0.7294118, 0.38431373, 1)
+energy = 4.0
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="starlight5" type="PointLight2D" parent="StarryNight" unique_id=1937119415]
+position = Vector2(-367.28082, -236.95898)
+scale = Vector2(0.1743881, 0.15276437)
+color = Color(0.65882355, 0.41960785, 0.20784314, 1)
+energy = 4.0
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="starlight6" type="PointLight2D" parent="StarryNight" unique_id=752936448]
+position = Vector2(-407.9942, -231.44572)
+scale = Vector2(0.1743881, 0.15276437)
+color = Color(0.65882355, 0.41960785, 0.20784314, 1)
+energy = 4.0
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="starlight7" type="PointLight2D" parent="StarryNight" unique_id=1667712553]
+position = Vector2(484.03812, -292.89005)
+scale = Vector2(0.1743881, 0.15276437)
+color = Color(0.65882355, 0.41960785, 0.20784314, 1)
+energy = 4.0
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="starlight8" type="PointLight2D" parent="StarryNight" unique_id=403933242]
+position = Vector2(516.69116, -305.0033)
+scale = Vector2(0.1743881, 0.15276437)
+color = Color(0.65882355, 0.41960785, 0.20784314, 1)
+energy = 4.0
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="starlight9" type="PointLight2D" parent="StarryNight" unique_id=785574613]
+position = Vector2(456.65164, -351.87622)
+scale = Vector2(0.1743881, 0.15276437)
+color = Color(0.65882355, 0.41960785, 0.20784314, 1)
+energy = 4.0
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="Shrine" type="Node2D" parent="." unique_id=1109763307]
+
+[node name="JapanProps02" type="Sprite2D" parent="Shrine" unique_id=393323114]
+modulate = Color(0.37897426, 0.35458332, 0.3019503, 1)
+z_index = -2
+position = Vector2(368.03568, -334.32034)
+scale = Vector2(2.385574, 2.4755573)
+texture = ExtResource("19_jrd6n")
+region_enabled = true
+region_rect = Rect2(0, 168, 112, 40)
+region_filter_clip_enabled = true
+
+[node name="JapanProps03" type="Sprite2D" parent="Shrine" unique_id=1727035235]
+modulate = Color(0.37897426, 0.35458332, 0.3019503, 1)
+z_index = -2
+position = Vector2(368.03568, -250.00586)
+scale = Vector2(2.385574, 2.4755576)
+texture = ExtResource("19_jrd6n")
+region_enabled = true
+region_rect = Rect2(24, 208, 64, 48)
+region_filter_clip_enabled = true
+
+[node name="JapanProps04" type="Sprite2D" parent="Shrine" unique_id=175074573]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = 1
+position = Vector2(338.39114, 42.894394)
+scale = Vector2(3.0087836, 2.608105)
+texture = ExtResource("19_jrd6n")
+region_enabled = true
+region_rect = Rect2(128, 228, 16, 28)
+
+[node name="JapanProps05" type="Sprite2D" parent="Shrine" unique_id=2081614485]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = 1
+position = Vector2(523.5211, 172.36443)
+scale = Vector2(3.0087836, 2.608105)
+texture = ExtResource("19_jrd6n")
+region_enabled = true
+region_rect = Rect2(128, 228, 16, 28)
+
+[node name="JapanProps06" type="Sprite2D" parent="Shrine" unique_id=1952596880]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+z_index = 1
+position = Vector2(-420.15793, 3.9928436)
+scale = Vector2(4.0070343, 3.373431)
+texture = ExtResource("19_jrd6n")
+region_enabled = true
+region_rect = Rect2(224, 24, 32, 40)
+
+[node name="starlight10" type="PointLight2D" parent="Shrine" unique_id=1247961593]
+position = Vector2(367.3824, -331.07306)
+scale = Vector2(0.5200106, 0.4380402)
+color = Color(0.65882355, 0.41960785, 0.20784314, 1)
+energy = 3.0
+shadow_filter = 1
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_b8t8i")
+texture_scale = 1.5
+
+[node name="susnpc" type="Node2D" parent="." unique_id=901956832]
+modulate = Color(0.9490196, 0.8901961, 0.7647059, 1)
+position = Vector2(564.4973, 235.6167)
+
+[node name="sequence" type="Node2D" parent="susnpc" unique_id=1091875362]
+
+[node name="susnpcStart" type="Marker2D" parent="susnpc/sequence" unique_id=116526164]
+position = Vector2(-16.52893, 76.8595)
+
+[node name="susnpcPath" type="Marker2D" parent="susnpc/sequence" unique_id=498150191]
+position = Vector2(-235.52893, -70.1405)
+
+[node name="susnpcPath2" type="Marker2D" parent="susnpc/sequence" unique_id=651368541]
+position = Vector2(-432.52893, -212.1405)
+
+[node name="susnpcPath3" type="Marker2D" parent="susnpc/sequence" unique_id=1260860817]
+position = Vector2(-601.52893, -174.1405)
+
+[node name="susnpcStop" type="Marker2D" parent="susnpc/sequence" unique_id=1640241955]
+position = Vector2(-739.52893, -272.1405)
+
+[node name="ui" type="CanvasLayer" parent="susnpc" unique_id=1248361092]
+layer = 15
+
+[node name="speechBubble" type="TextureRect" parent="susnpc/ui" unique_id=1822825758]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -458.06232
+offset_top = 196.98808
+offset_right = -354.52423
+offset_bottom = 255.79996
+grow_horizontal = 2
+scale = Vector2(3.0557323, 2.622354)
+texture = SubResource("AtlasTexture_yerfe")
+
+[node name="question" type="Label" parent="susnpc/ui/speechBubble" unique_id=317904151]
+layout_mode = 0
+offset_left = 6.4616857
+offset_top = 4.747793
+offset_right = 200.4449
+offset_bottom = 45.747795
+scale = Vector2(0.47598654, 0.5896953)
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/font = ExtResource("21_pp3pk")
+theme_override_font_sizes/font_size = 8
+text = "A customer shows a payment screenshot but you didn’t get it. Next step?"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="buttonA" type="Button" parent="susnpc/ui/speechBubble" unique_id=1410098752]
+layout_mode = 0
+offset_left = 10.084906
+offset_top = 31.391064
+offset_right = 219.1543
+offset_bottom = 71.39107
+scale = Vector2(0.18873192, 0.2567204)
+theme_override_fonts/font = ExtResource("6_ww6yf")
+theme_override_font_sizes/font_size = 16
+text = "Looks real *clicks*"
+autowrap_mode = 3
+
+[node name="buttonB" type="Button" parent="susnpc/ui/speechBubble" unique_id=1468583081]
+layout_mode = 0
+offset_left = 54.321712
+offset_top = 31.4039
+offset_right = 305.94476
+offset_bottom = 71.403915
+scale = Vector2(0.15687338, 0.25526968)
+theme_override_fonts/font = ExtResource("6_ww6yf")
+theme_override_font_sizes/font_size = 16
+text = "Check your account first"
+autowrap_mode = 3
+
+[node name="responseTimer" type="Timer" parent="susnpc/ui/speechBubble" unique_id=1525218182]
+wait_time = 12.0
+one_shot = true
+
+[node name="effectPanel" type="TextureRect" parent="." unique_id=679073900]
+modulate = Color(0.98039216, 0.8039216, 0.60784316, 1)
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -277.92725
+offset_top = 167.41098
+offset_right = -54.927246
+offset_bottom = 209.13626
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("AtlasTexture_b8t8i")
+
+[node name="effectLabel" type="Label" parent="effectPanel" unique_id=11025016]
+layout_mode = 0
+offset_left = 8.336243
+offset_top = 9.757996
+offset_right = 242.33624
+offset_bottom = 32.757996
+scale = Vector2(0.69451153, 0.9927686)
+theme_override_colors/font_color = Color(0.24705882, 0.18039216, 0.13725491, 1)
+theme_override_fonts/font = ExtResource("21_pp3pk")
+text = "Slow Customers ="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="effectTimerLabel" type="Label" parent="effectPanel" unique_id=658400503]
+layout_mode = 0
+offset_left = 172.59314
+offset_top = 11.619812
+offset_right = 236.59314
+offset_bottom = 34.619812
+scale = Vector2(0.6477783, 0.8214974)
+theme_override_colors/font_color = Color(0.24705882, 0.18039216, 0.13725491, 1)
+theme_override_fonts/font = ExtResource("21_pp3pk")
+text = "120s"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="effectTimer" type="Timer" parent="effectPanel" unique_id=449480779]
+one_shot = true
+
+[node name="Lighting" type="Node2D" parent="." unique_id=2079441369]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Lighting" unique_id=176859105]
+root_node = NodePath("../../Pillars and Lanters/Lantern/lantern2")
+libraries/ = SubResource("AnimationLibrary_abp7u")
+autoplay = &"flicker"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Lighting" unique_id=289591127]
+color = Color(0.8047426, 0.80474263, 0.8047426, 1)
+
+[node name="light9" type="PointLight2D" parent="Lighting" unique_id=1540521649]
+position = Vector2(-145.35042, -269.98648)
+rotation = -2.7067118
+scale = Vector2(3.5281725, -1.2851169)
+skew = -0.3961898
+color = Color(1, 0.9137255, 0.75686276, 1)
+energy = 1.9
+texture = SubResource("GradientTexture2D_yerfe")
+
+[node name="light10" type="PointLight2D" parent="Lighting" unique_id=1225698832]
+position = Vector2(-135.27377, -318.96155)
+rotation = -2.706712
+scale = Vector2(3.4711397, -0.6053459)
+skew = 0.8203045
+color = Color(1, 0.9137255, 0.75686276, 1)
+energy = 1.9
+texture = SubResource("GradientTexture2D_yerfe")
+
+[node name="light11" type="PointLight2D" parent="Lighting" unique_id=1344873607]
+position = Vector2(-32.85913, -229.9759)
+rotation = -1.5283521
+scale = Vector2(1.1346321, -0.44277266)
+skew = -0.6213372
+color = Color(1, 0.9137255, 0.75686276, 1)
+energy = 1.9
+texture = SubResource("GradientTexture2D_yerfe")
+
+[node name="light12" type="PointLight2D" parent="Lighting" unique_id=1631987123]
+light_mask = 16
+position = Vector2(-145.9356, -91.06136)
+rotation = -2.6755512
+scale = Vector2(-2.3225832, 1.412318)
+skew = 0.5899213
+color = Color(1, 0.56299996, 0.31, 1)
+energy = 1.3
+texture = SubResource("GradientTexture2D_yerfe")
+
+[node name="Ambient_Player" type="AudioStreamPlayer2D" parent="." unique_id=1495807110]
+volume_db = -10.0
+
+[node name="SFX_Player" type="AudioStreamPlayer2D" parent="." unique_id=1998775706]
+volume_db = -5.0
+
+[node name="Grill_Player" type="AudioStreamPlayer2D" parent="." unique_id=1835659623]
+stream = ExtResource("23_b8t8i")
+volume_db = -20.0
+parameters/looping = true
+
+[node name="Ocean_Player" type="AudioStreamPlayer2D" parent="." unique_id=1523613675]
+stream = ExtResource("24_355h4")
+volume_db = -18.0
+parameters/looping = true
+
+[node name="PopupScamTimer" type="Timer" parent="." unique_id=165761565]
+one_shot = true
+
+[node name="popup_ui" type="CanvasLayer" parent="." unique_id=1907840276]
+
+[node name="fakePopup" type="Sprite2D" parent="popup_ui" unique_id=993875795]
+position = Vector2(566.7103, 338.91495)
+scale = Vector2(4.9840007, 5.3080616)
+texture = SubResource("AtlasTexture_abp7u")
+
+[node name="titleLabel" type="Label" parent="popup_ui/fakePopup" unique_id=655449011]
+offset_left = -37.768383
+offset_top = -27.473171
+offset_right = 222.23161
+offset_bottom = -4.473171
+scale = Vector2(0.29008752, 0.33245674)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ww6yf")
+text = "⚠️ URGENT WARNING! ⚠️"
+horizontal_alignment = 1
+
+[node name="messageLabel" type="Label" parent="popup_ui/fakePopup" unique_id=485639963]
+offset_left = -31.733261
+offset_top = -31.04436
+offset_right = 161.31056
+offset_bottom = 193.95564
+scale = Vector2(0.32502544, 0.23397891)
+theme_override_colors/font_color = Color(0.14509805, 0.0627451, 0.039215688, 1)
+theme_override_fonts/font = ExtResource("21_pp3pk")
+text = "Your payment system is locked. Verify your password now."
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="buttonA" type="Button" parent="popup_ui/fakePopup" unique_id=66396842]
+offset_left = -32.73733
+offset_top = 15.826465
+offset_right = 303.26266
+offset_bottom = 46.826473
+scale = Vector2(0.19644232, 0.21935482)
+theme_override_fonts/font = ExtResource("21_pp3pk")
+text = "Close and verify safely"
+
+[node name="buttonB" type="Button" parent="popup_ui/fakePopup" unique_id=1858258775]
+offset_left = -33.114986
+offset_top = 23.782082
+offset_right = 302.885
+offset_bottom = 54.78209
+scale = Vector2(0.19694598, 0.21409445)
+theme_override_fonts/font = ExtResource("21_pp3pk")
+text = "Close and verify safely"
+
+[node name="popupResponseTimer" type="Timer" parent="popup_ui/fakePopup" unique_id=905406772]
+one_shot = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="CustomerTimer" to="." method="_on_customer_timer_timeout"]
+[connection signal="finished" from="Ambient_Player" to="." method="_on_ambient_player_finished"]

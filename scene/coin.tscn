@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bjpof4t1jr4fu"]
+
+[ext_resource type="Texture2D" uid="uid://67v0nsythg75" path="res://assets/stall/MonedaD.png" id="1_d5gmh"]
+[ext_resource type="Script" uid="uid://ceg7f505108up" path="res://scripts/coin.gd" id="1_ya73g"]
+[ext_resource type="AudioStream" uid="uid://kwl4y3dvgqxa" path="res://assets/music/u_o8xh7gwsrj-correct_answer_toy_bi-bling-476370.mp3" id="3_leebs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0t63x"]
+atlas = ExtResource("1_d5gmh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7riw"]
+atlas = ExtResource("1_d5gmh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdq0q"]
+atlas = ExtResource("1_d5gmh")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w14il"]
+atlas = ExtResource("1_d5gmh")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4etq"]
+atlas = ExtResource("1_d5gmh")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4fra"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0t63x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7riw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdq0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w14il")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4etq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_te2np"]
+radius = 6.3245554
+
+[node name="coin" type="Area2D" unique_id=494783541]
+script = ExtResource("1_ya73g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1413305688]
+modulate = Color(0.8, 0.74880004, 0.28800002, 1)
+position = Vector2(0.5, 0)
+scale = Vector2(2.127, 2)
+sprite_frames = SubResource("SpriteFrames_o4fra")
+autoplay = "default"
+frame = 4
+frame_progress = 0.921745
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=319405915]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_te2np")
+
+[node name="PopupText" type="Label" parent="." unique_id=2062663001]
+offset_left = -17.0
+offset_top = -32.000004
+offset_right = 33.0
+offset_bottom = -9.000004
+scale = Vector2(0.7, 0.7)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1.7919691, 1.7919691, 1.7919691, 1)
+text = "+ ¥100"
+
+[node name="Click_Player" type="AudioStreamPlayer2D" parent="." unique_id=1007975398]
+stream = ExtResource("3_leebs")
+volume_db = -8.0
