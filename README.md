@@ -32,7 +32,6 @@ I've always enjoyed cozy games like Stardew Valley, Unpacking, A Little to the L
 - Godot Engine
 - GDScript
 - Pixel Art (Piskel & PixSquare)
-- GitHub
 - itch.io
 
 ## 📚 What I Learned 📚
