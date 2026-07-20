@@ -2,7 +2,7 @@
 
 > A cozy yakitori management game that teaches cybersecurity awareness through gameplay.
 
-<img width="1151" height="646" alt="Screenshot 2026-07-18 164654" src="https://github.com/user-attachments/assets/450614b0-3d49-4140-8517-3cea75f0502d" />
+<img width="1157" height="652" alt="Screenshot 2026-05-12 233849" src="https://github.com/user-attachments/assets/439d5057-18d6-4ed9-8bb9-108d20db76cc" />
 
 ##  🍀 Play the Game 🍀
 You can play Little Lantern Stall on itch.io:
